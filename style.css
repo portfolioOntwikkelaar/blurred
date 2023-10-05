@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Jacques Francois Shadow', cursive;
+  font-weight: 900;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to right, #23074d, #cc5333);
+
+}
+h2 {
+  position: relative;
+  display: flex;
+  gap:5px;
+  color: #fff;
+  cursor: pointer;
+}
+h2 span {
+  position: relative;
+  filter: blur(5px);
+  padding: 0 5px;
+  transition: 0.5s;
+}
+h2 span:hover {
+  filter: blur(0px);
+  transition: 0s;
+}
+h2 span i {
+  position: absolute;
+  inset: 0;
+  background: transparent;
+}
+h2 span:hover i::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left:0;
+  width: 2px;
+  height: 8px;
+  background: #000;
+  box-shadow: 0 33px #000,
+  36px 33px #000,
+  36px 0 #000;
+}
+
+h2 span:hover i::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left:0;
+  width: 8px;
+  height: 2px;
+  background: #000;
+  box-shadow:
+  0 40px #000,
+  30px 40px #000,
+  30px 0 #000;
+}
